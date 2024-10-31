@@ -1,0 +1,9 @@
+<h1>Perfil de usuario</h1>
+
+<p> Bienvenido, {{user.first_name}} {{user.last_name}}</p>
+<p>Email: {{user.email}}</p>
+<p>Edad: {{user.age}}</p>
+
+<form method="POST" action="/api/logout">
+  <button type="submit">Cerrar sesión</button>
+</form>

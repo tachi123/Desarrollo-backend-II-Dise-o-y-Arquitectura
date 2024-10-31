@@ -56,3 +56,21 @@ app.get('/newProduct', (req, res) =>{
 const server = app.listen(8080, ()=> {
     console.log("Listening on PORT 8080")
 });
+
+router.post('/register', passport.authenticate('register',{failureRedirect:'/failregister'}), async (req,res) => {
+    res.send({status:"success", message: "User registered"})
+})
+
+router.get('/failregister', async (req,res) => {
+    console.log("Failed Strategy")
+    res.send({error: "Failed"})
+})
+
+passport.serializeUser((user, done) => {
+    done(null, user.id);
+})
+
+passport.desserializeUser( async(id, done) => {
+    let user = await userService.findById(id);
+    done(null, user.id);
+})
