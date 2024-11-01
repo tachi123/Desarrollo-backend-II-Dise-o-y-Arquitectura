@@ -18,7 +18,6 @@ router.post('/failregister', async (req,res) => {
 
 //Iniciar sesión 
 router.post('/login', passport.authenticate('login', {failureRedirect: 'failloging'}), async (req,res) => {
-    console.log('toy accaaaa');
     if(!req.user) 
         return res.status(400).send({ status: 'error', error: 'Invalid credentials' });
     req.session.user = {
