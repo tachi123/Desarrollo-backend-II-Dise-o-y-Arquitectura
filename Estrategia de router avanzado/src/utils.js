@@ -15,7 +15,6 @@ export const createHash = (password) => bcrypt.hashSync(password, bcrypt.genSalt
 // Devuelve true si el password coincide con el password hasheado, false en caso contrario
 export const isValidPassword = (user, password) => bcrypt.compareSync(password, user.password);
 
-
 // Define una constante llamada filename 
 // La constante almacena la ruta a un archivo meta
 const __filename = fileURLToPath(import.meta.url);

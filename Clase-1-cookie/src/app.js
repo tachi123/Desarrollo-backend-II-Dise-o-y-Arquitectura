@@ -18,6 +18,7 @@ app.use(express.urlencoded({ extended: true }));
 //Agregar una firma a las cookies
 app.use(cookieParser("CoderS3cR3tC0D3"));
 
+
 app.use(session({
     // secret: 'secretCoder',
     /**

@@ -6,7 +6,7 @@ const router = express.Router();
 
 
 //Registración
-router.post('/register', passport.authenticate('register', {failureRedirect:'failregister'}), async (req,res) => {
+router.post('/register',res async (req,res) => {
     res.send({status: "success",message: "User registered"})
 })
 

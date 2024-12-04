@@ -1,0 +1,3 @@
+let usuarios = [];
+
+//FUNCIONES DEL CONTROLADOR DE USUARIOS

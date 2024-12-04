@@ -2,7 +2,6 @@ import express from 'express';
 import { createHash , isValidPassword } from '../utils.js'
 const router = express.Router();
 
-
 //Registración
 router.post('/register', async (req,res) => {
     try{
