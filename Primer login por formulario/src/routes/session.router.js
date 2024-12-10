@@ -63,7 +63,6 @@ router.post('/login', async (req,res) => {
 })
 
 //Restaurar contraseña
-
 router.post('/restore-password', async (req, res) => {
     const {email, newPassword} = req.body;
     try{
